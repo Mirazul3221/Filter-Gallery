@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <style>
+        section{
+            overflow: hidden;
+        }
+
+        .active{
+            background: black;
+            color: bisque;
+        }
+
+        ul li{
+            cursor: pointer;
+        }
+  .image-box img{
+/* margin-left: 100px; */
+  }
+
+
+
+  .anim{
+    margin-left: 0px;
+  }
+
+
+
+    </style>
+
+<section>
+    <ul class="mx-auto flex py-4 font-bold px-4 gap-4 bg-gray-100 justify-center mt-10">
+        <li class="border-2 active p-4">ALL</li>
+        <li class="border-2  p-4">MANGO</li>
+        <li class="border-2  p-4">APPLE</li>
+        <li class="border-2  p-4">JACKFRUIT</li>
+        <li class="border-2  p-4">GRAPS</li>
+    </ul>
+
+    <div class="image-box flex flex-wrap justify-center">
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/download (11).jfif" alt="">
+        <img data-project="MANGO" class="border-8 w-[300px]" src="./images/download (1).jfif" alt="">
+        <img data-project="APPLE" class="border-8 w-[300px]" src="./images/images (1).jfif" alt="">
+        <img data-project="JACKFRUIT" class="border-8 w-[300px]" src="./images/download (5).jfif" alt="">
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/download (9).jfif" alt="">
+        <img data-project="MANGO" class="border-8 w-[300px]" src="./images/download (3).jfif" alt="">
+        <img data-project="APPLE" class="border-8 w-[300px]" src="./images/download (4).jfif" alt="">
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/download (10).jfif" alt="">
+        
+        <img data-project="APPLE" class="border-8 w-[300px]" src="./images/download (4).jfif" alt="">
+        
+
+        <img data-project="JACKFRUIT" class="border-8 w-[300px]" src="./images/images (5).jfif" alt="">
+        <img data-project="MANGO" class="border-8 w-[300px]" src="./images/download (2).jfif" alt="">
+        <img data-project="JACKFRUIT" class="border-8 w-[300px]" src="./images/download (6).jfif" alt="">
+        
+        <img data-project="JACKFRUIT" class="border-8 w-[300px]" src="./images/images (3).jfif" alt="">
+        <img data-project="MANGO" class="border-8 w-[300px]" src="./images/download.jfif" alt="">
+        <img data-project="APPLE" class="border-8 w-[300px]" src="./images/images.jfif" alt="">
+        
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/download (8).jfif" alt="">
+        <img data-project="JACKFRUIT" class="border-8 w-[300px]" src="./images/images (2).jfif" alt="">
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/images (6).jfif" alt="">
+        <img data-project="APPLE" class="border-8 w-[300px]" src="./images/images.jfif" alt="">
+        <img data-project="GRAPS" class="border-8 w-[300px]" src="./images/images (7).jfif" alt="">
+
+    </div>
+
+</section>
+
+<script>
+const btns = document.querySelectorAll("ul li");
+const images = document.querySelectorAll(".image-box img");
+
+
+btns.forEach(li =>{
+
+    li.onclick = function(){
+       btns.forEach(li =>{
+        li.classList.remove('active');
+
+       });
+      li.classList.add('active');
+
+      const value = li.innerHTML;
+
+     
+
+
+      images.forEach(img =>{
+        img.style.display = 'none';
+        const ingValue = img.getAttribute('data-project');
+        if (value == ingValue || value == 'ALL') {
+           img.style.display = 'block';  
+        }
+      })
+
+    }
+  
+})
+
+</script>
+
+
+<!-- 
+<script>
+
+    const btns = document.querySelectorAll('ul li');
+
+    const imgs = document.querySelectorAll('.image-box img');
+
+
+    btns.forEach(li =>{
+      li.onclick = function (){
+         btns.forEach(li =>{
+            li.classList.remove('active');
+         });
+         
+         
+         li.classList.add('active');
+         
+
+         let value = li.innerHTML;
+
+         
+    imgs.forEach(img=>{
+   img.style.display = "none"
+   let imageData = img.getAttribute('data-project');
+  
+   if (imageData == value.toUpperCase() || value.toUpperCase() == 'ALL' ) {
+            img.style.display = "block" 
+            img.classList.add('anim')
+         }
+ 
+});
+
+
+         
+     
+
+      }
+     
+
+
+
+    });
+
+
+
+  
+</script> -->
+</body>
+</html>

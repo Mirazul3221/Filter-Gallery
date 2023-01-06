@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <style>
+        section{
+            overflow: hidden;
+        }
+
+        .active{
+            background: black;
+            color: bisque;
+        }
+
+        ul li{
+            cursor: pointer;
+        }
+  .image-box img{
+/* margin-left: 100px; */
+  }
+
+
+
+  .anim{
+    margin-left: 0px;
+  }
+
+
+
+    </style>
+
+<section>
+    <ul class="mx-auto flex py-4 font-bold px-4 gap-4 bg-gray-100 justify-center mt-10">
+        <li class="border-2 active p-4">ALL</li>
+        <li class="border-2  p-4">WP-WEBSITE</li>
+        <li class="border-2  p-4">REACT-WEBSITE</li>
+        <li class="border-2  p-4">HTML-WEBSITE</li>
+        <li class="border-2  p-4">MY IMAGE</li>
+    </ul>
+
+    <div class="image-box flex flex-wrap justify-center">
+        <img data-project="WP-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="WP-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="WP-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="WP-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+
+
+        <img data-project="REACT-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="REACT-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="REACT-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="REACT-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="REACT-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="HTML-WEBSITE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+
+
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+        <img data-project="MY IMAGE" class="border-8 w-[300px]" src="./FB_IMG_1671639958311-removebg-preview.png" alt="">
+    </div>
+
+</section>
+
+<script>
+
+    const btns = document.querySelectorAll('ul li');
+
+    const imgs = document.querySelectorAll('.image-box img');
+
+
+    btns.forEach(li =>{
+      li.onclick = function (){
+         btns.forEach(li =>{
+            li.classList.remove('active');
+         });
+         
+         
+         li.classList.add('active');
+         
+
+         let value = li.innerHTML;
+
+         
+    imgs.forEach(img=>{
+   img.style.display = "none"
+   let imageData = img.getAttribute('data-project');
+  
+   if (imageData == value.toUpperCase() || value.toUpperCase() == 'ALL' ) {
+            img.style.display = "block" 
+            img.classList.add('anim')
+         }
+ 
+});
+
+
+         
+     
+
+      }
+     
+
+
+
+    });
+
+
+
+  
+</script>
+</body>
+</html>
